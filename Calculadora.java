@@ -46,24 +46,30 @@ public class Calculadora
      * Metodo para calcular la suma de los numeros comprendidos entre a y b pasados por parametro,
      * incluidos.
      */
-    public void sumValuesInterval(int a, int b){
+    public int sumValuesInterval(int a, int b){
         int suma=0;
         int aux;
-        if(a>b){
-            aux=a;
-            a = b;
-            b = aux;
-        }
-        if(a==b){
-            suma = a;
-        }
-        else{
-            while(a<=b){
-                suma = suma + a;
-                a++;
+        if(a>=0 && b>=0){
+            if(a>b){
+                aux=a;
+                a = b;
+                b = aux;
+            }
+            if(a==b){
+                suma = a;
+            }
+            else{
+                while(a<=b){
+                    suma = suma + a;
+                    a++;
+                }
             }
         }
-        System.out.println(suma);
+        else{
+            System.out.println("ERROR. Los numeros introducidos deben de ser mayores que 0");
+            suma = -1;
+        }
+        return suma;
     }
 
     /**
