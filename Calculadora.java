@@ -13,7 +13,7 @@ public class Calculadora
      */
     public Calculadora()
     {
-    
+
     }
 
     /**
@@ -28,7 +28,7 @@ public class Calculadora
             i++;
         }
     }
-    
+
     /**
      * Metodo para calcular la suma de los numeros comprendidos entre 0 y 10 incluidos.
      */
@@ -41,19 +41,29 @@ public class Calculadora
         }
         System.out.println(suma);
     }
-    
+
     /**
      * Metodo para calcular la suma de los numeros comprendidos entre a y b pasados por parametro,
      * incluidos.
      */
     public void sumValuesInterval(int a, int b){
         int suma=0;
-        while(a<=b){
-            suma = suma + a;
-            a++;
+        int aux;
+        if(a>b){
+            aux=a;
+            a = b;
+            b = aux;
+        }
+        if(a==b){
+            suma = a;
+        }
+        else{
+            while(a<=b){
+                suma = suma + a;
+                a++;
+            }
         }
         System.out.println(suma);
     }
-   
-    
+
 }
