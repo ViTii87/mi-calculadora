@@ -29,4 +29,18 @@ public class Calculadora
         }
     }
     
+    /**
+     * Metodo para calcular la suma de los numeros comprendidos entre 0 y 10 incluidos.
+     */
+    public void sumValues(){
+        int i=0;
+        int suma=0;
+        while(i<=10){
+            suma = suma + i;
+            i++;
+        }
+        System.out.println(suma);
+    }
+    
+    
 }
