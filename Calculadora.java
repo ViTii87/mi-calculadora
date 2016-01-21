@@ -66,4 +66,24 @@ public class Calculadora
         System.out.println(suma);
     }
 
+    /**
+     * Metodo para devolver true si el numero introducido es primo y false si no lo es.
+     */
+    public boolean isPrime(int n){
+        int numInicio=2;
+        boolean esPrimo = true;
+        if(n>1){
+            while((numInicio <= n-1) && esPrimo){
+                if(n % numInicio == 0){
+                    esPrimo = false;
+                }
+                numInicio++;
+            }
+        }
+        else{
+            esPrimo = false;
+            System.out.println("ERROR. El numero introducido debe de ser mayor que 1");
+        }
+        return esPrimo;
+    }
 }
