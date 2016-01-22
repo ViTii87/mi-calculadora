@@ -110,6 +110,13 @@ public class Test
         System.out.println("Comprobando isPrime(101)... Resultado: true / Resultado metodo " 
         + testCalculadora1.isPrime(101) + " ... " + resultado);
         
+        if(testCalculadora1.isPrime(1)){
+            resultado = "ERROR";
+            error = true;
+        }
+        System.out.println("Comprobando isPrime(1)... Resultado: false / Resultado metodo " 
+        + testCalculadora1.isPrime(1) + " ... " + resultado);
+        
         if(error){
             System.out.println("El metodo NO funciona correctamente");
         }
