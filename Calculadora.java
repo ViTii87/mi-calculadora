@@ -91,4 +91,22 @@ public class Calculadora
         }
         return esPrimo;
     }
+
+    /**
+     * Metodo para multiplicar 2 numeros solo usando sumas.
+     */
+    public int multiplica(int a, int b){
+        int i=1;
+        int total=0;
+        if(a>=0 && b>=0){
+            while(i<=b){
+                total = total + a;
+                i++;
+            }
+        }else
+        {
+          total = -1;  
+        }
+        return total;
+    }
 }
